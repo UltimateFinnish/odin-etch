@@ -1,5 +1,5 @@
+let container = document.querySelector(".grid-container");
 function createCells(size) {
-    let container = document.querySelector(".grid-container");
     for (i = 0; i < size * size; i++) {
         let cell = document.createElement('div');
         cell.setAttribute("class", "cell");
@@ -11,10 +11,17 @@ function createCells(size) {
 
 createCells(16);
 
-// function changeBack(e) {
-//    e.target.style = "background-color: blue;";
-// }
-
 function changeColor(e) {
     e.target.style = "background-color: red";
 }
+
+let btn = document.querySelector(".reset");
+btn.addEventListener("click", resetGrid);
+
+
+function resetGrid(){
+    let allTiles = document.querySelectorAll(".cell");
+    allTiles.forEach(element => {
+        element.removeAttribute("style");
+    });
+};
