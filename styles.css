@@ -1,16 +1,8 @@
-.container {
+.grid-container {
     display: grid;
     grid-template: repeat(16, 20px) / repeat(16, 20px);
     row-gap: 2px;
     column-gap: 2px;
-    max-width: max-content;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    align-content: center;
     border-style: groove;
     border-color: orangered;
     max-height: max-content;
@@ -25,4 +17,31 @@
     border: solid;
     border-width: 2px;
     border-color: black;
+}
+
+.reset {
+    max-width: fit-content;
+    align-self: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+html {
+
+}
+
+body {
+    display: flex;
 }

@@ -1,5 +1,5 @@
 function createCells(size) {
-    let container = document.querySelector(".container");
+    let container = document.querySelector(".grid-container");
     for (i = 0; i < size * size; i++) {
         let cell = document.createElement('div');
         cell.setAttribute("class", "cell");
