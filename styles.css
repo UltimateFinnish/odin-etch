@@ -11,10 +11,10 @@
     left: 0;
     right: 0;
     align-content: center;
-}
-
-body {
-  
+    border-style: groove;
+    border-color: orangered;
+    max-height: max-content;
+    border-width: 20px; 
 }
 
 .cell {

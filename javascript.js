@@ -5,15 +5,15 @@ function createCells(size) {
         cell.setAttribute("class", "cell");
         cell.addEventListener("mouseover", changeColor);
         container.appendChild(cell);
-        cell.addEventListener("mouseout", changeBack)
+        // cell.addEventListener("mouseout", changeBack)
     }
 }
 
 createCells(16);
 
-function changeBack(e) {
-    e.target.style = "background-color: blue;";
-}
+// function changeBack(e) {
+//    e.target.style = "background-color: blue;";
+// }
 
 function changeColor(e) {
     e.target.style = "background-color: red";
