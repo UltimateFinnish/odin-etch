@@ -9,7 +9,7 @@ function createCells(size) {
     }
 }
 
-createCells(16);
+createCells();
 
 function changeColor(e) {
     e.target.style = "background-color: red";
@@ -24,4 +24,7 @@ function resetGrid(){
     allTiles.forEach(element => {
         element.removeAttribute("style");
     });
+    let cont = document.querySelector(".grid-container");
+    cont.setAttribute("style", "grid-template:repeat(2, 20px) / repeat(2, 20px");
+    createCells(2);
 };
