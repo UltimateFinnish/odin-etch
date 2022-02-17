@@ -5,8 +5,9 @@
     column-gap: 2px;
     border-style: groove;
     border-color: orangered;
-    max-height: max-content;
     border-width: 20px; 
+    max-width: 960px;
+    max-height: 960px;
 }
 
 .cell {

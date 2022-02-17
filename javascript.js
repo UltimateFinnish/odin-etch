@@ -5,7 +5,6 @@ function createCells(size) {
         cell.setAttribute("class", "cell");
         cell.addEventListener("mouseover", changeColor);
         container.appendChild(cell);
-        // cell.addEventListener("mouseout", changeBack)
     }
 }
 
@@ -25,7 +24,11 @@ function resetGrid(){
         element.removeAttribute("style");
     });
     document.querySelectorAll(".cell").forEach(e => e.remove());
-    const size = prompt("Please enter your grid size (size x size): ", "16");
+    let size = prompt("Please enter your grid size between 1-40 (size x size): ", "16");
+    while (size > 40 || size < 1 || isNaN(size) == true) {
+        size = prompt("Please enter your grid size between 1-40 (size x size): ", "16");
+        if (size === null) break;
+    }
     let cont = document.querySelector(".grid-container");
     cont.setAttribute("style", `grid-template:repeat(${size}, 20px) / repeat(${size}, 20px)`);
     createCells(size);
