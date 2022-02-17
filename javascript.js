@@ -11,7 +11,7 @@ function createCells(size) {
 createCells(16);
 
 function changeColor(e) {
-    e.target.style = "background-color: white";
+    e.target.style = "background-color: purple";
 }
 
 let btn = document.querySelector(".reset");
